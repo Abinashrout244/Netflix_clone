@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/authProvider";
+import { AuthContext } from "../../context/AuthContext";
+import Banner from "../../assets/images/banner.jpg";
+// import hero from "../../assets/images/hero_banner.jpg";
+// import text from "../../assets/images/hero_title.png";
 
 const PublicBody = () => {
   const location = useLocation();
@@ -21,19 +24,15 @@ const PublicBody = () => {
   };
 
   return (
-    <section className="relative h-screen w-full">
+    <section className=" h-screen w-full">
       <img
-        src="https://tse3.mm.bing.net/th/id/OIP.nJ3yb-GJqbdWSc4T9XLdYgHaEK?pid=Api&P=0&h=180"
+        src={Banner}
         alt="Netflix Banner"
         className="absolute h-full w-full object-cover"
       />
 
-      {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/60" />
 
-      <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-black/80" />
-
-      {/* CONTENT */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white pt-14">
         <h1 className="max-w-xl text-2xl font-bold md:text-5xl lg:text-6xl">
           Unlimited movies, shows, and more

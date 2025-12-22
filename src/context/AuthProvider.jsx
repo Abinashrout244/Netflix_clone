@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -9,8 +9,8 @@ import {
   signOut,
 } from "firebase/auth";
 import app from "../firebase/Firebase.config";
+import { AuthContext } from "./AuthContext";
 
-export const AuthContext = createContext();
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
@@ -42,6 +42,7 @@ const AuthProvider = ({ children }) => {
   //logout
 
   const Logout = () => {
+    setLoading(true);
     return signOut(auth);
   };
 

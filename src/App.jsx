@@ -5,10 +5,11 @@ import SignUp from "./pages/publicsite/signUp";
 import PublicBody from "./components/publiclayout/PublicBody";
 import MainSite from "./pages/mainsite/MainSite";
 import PrivateRoute from "./route/PrivateRoute";
+import { Navigate } from "react-router-dom";
 
 const appRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "/in",
     element: <Publicsite />,
     children: [
       { index: true, element: <PublicBody /> },
@@ -17,8 +18,11 @@ const appRouter = createBrowserRouter([
     ],
   },
 
+  { path: "/login", element: <Navigate to="/in/login" replace /> },
+  { path: "/signup", element: <Navigate to="/in/signup" replace /> },
+
   {
-    path: "/app",
+    path: "/",
     element: (
       <PrivateRoute>
         <MainSite />
