@@ -7,22 +7,22 @@ This project focuses on modern UI, fast performance, and clean component archite
 
 ---
 
-## Tech Stack
+## 🚀 Tech Stack
 
-- React – UI Library
-- Vite – Fast build tool
-- Tailwind CSS – Styling
-- TMDB API – Movie & TV data
-- Firebase (optional) – Authentication
-- React Router – Navigation
+- ⚛️ React – UI Library
+- ⚡ Vite – Fast build tool
+- 🎨 Tailwind CSS – Styling
+- 🎬 TMDB API – Movie & TV data
+- 🔐 Firebase (optional) – Authentication
+- 🧭 React Router – Navigation
 
 ---
 
-## Features
+## ✨ Features
 
 - Browse Trending, Popular & Top Rated Movies
 - Search Movies & TV Shows
-- Dynamic Banners & Rows (Netflix style)
+- Dynamic Banners & Rows (Netflix-style UI)
 - Fully Responsive Design
 - Movie Details with Rating & Overview
 - Authentication (Login / Signup)
@@ -30,10 +30,9 @@ This project focuses on modern UI, fast performance, and clean component archite
 
 ---
 
-## API Used
+## 🔗 API Used
 
 **TMDB – The Movie Database**
 
 - Website: https://www.themoviedb.org/
 - API Base URL:
-

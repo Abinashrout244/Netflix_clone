@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import MainHeader from "../../components/Privatelayout/mainHeader";
+import MainHeader from "../../components/Privatelayout/MainHeader";
 import MainBody from "../../components/Privatelayout/mainBody";
 import Card from "../../components/Privatelayout/Card";
 import Footer from "../../components/Footer/Footer";
