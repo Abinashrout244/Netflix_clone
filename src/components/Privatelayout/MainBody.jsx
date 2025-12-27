@@ -3,7 +3,7 @@ import heroBanner from "../../assets/images/hero_banner.jpg";
 import text from "../../assets/images/hero_title.png";
 import playicon from "../../assets/images/play_icon.png";
 import moreinfo from "../../assets/images/info_icon.png";
-import Card from "../publiclayout/Card";
+import Card from "../Privatelayout/Card";
 
 const MainBody = ({ data }) => {
   const description =
@@ -31,10 +31,16 @@ const MainBody = ({ data }) => {
           </p>
 
           <div className="flex gap-3 md:pt-7">
-            <button className="flex items-center gap-3 rounded bg-white px-4 py-2 md:px-6">
-              <img src={playicon} className="h-4 w-4 md:h-7 md:w-7" />
-              <span className="text-sm font-semibold md:text-lg">Play</span>
-            </button>
+            <a
+              href="https://youtu.be/W984-3M8Bio?si=Tt5vSJ9HhKGWfdmj"
+              target="_blank"
+            >
+              <button className="flex items-center gap-3 rounded bg-white px-4 py-2 md:px-6">
+                <img src={playicon} className="h-4 w-4 md:h-7 md:w-7" />
+
+                <span className="text-sm font-semibold md:text-lg">Play</span>
+              </button>
+            </a>
 
             <button className="flex items-center gap-3 rounded bg-white/30 px-4 py-2">
               <img src={moreinfo} className="h-4 w-4 md:h-7 md:w-7" />

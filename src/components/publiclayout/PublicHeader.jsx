@@ -5,7 +5,7 @@ const PublicHeader = () => {
   return (
     <header className=" top-0 left-0 z-50 w-full absolute">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-        <Link to="/">
+        <Link to="/in">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
             alt="Netflix"

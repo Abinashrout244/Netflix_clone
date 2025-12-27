@@ -6,6 +6,7 @@ import PublicBody from "./components/publiclayout/PublicBody";
 import MainSite from "./pages/mainsite/MainSite";
 import PrivateRoute from "./route/PrivateRoute";
 import { Navigate } from "react-router-dom";
+import Player from "./components/Privatelayout/Player";
 
 const appRouter = createBrowserRouter([
   {
@@ -26,6 +27,14 @@ const appRouter = createBrowserRouter([
     element: (
       <PrivateRoute>
         <MainSite />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "player/:id",
+    element: (
+      <PrivateRoute>
+        <Player />
       </PrivateRoute>
     ),
   },

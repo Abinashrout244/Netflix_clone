@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { DataContext } from "../../context/DataProvider";
 
 const Card = ({ category, title_text }) => {
+  const { moviesByCategory, addMovies } = useContext(DataContext);
   const [data, setData] = useState([]);
   const fetchData = async () => {
+    if (moviesByCategory[category]) {
+      setData(moviesByCategory[category]);
+      return;
+    }
     try {
       const options = {
         method: "GET",
@@ -24,6 +31,7 @@ const Card = ({ category, title_text }) => {
 
       const respone = await info.json();
       setData(respone.results);
+      addMovies(category, respone.results);
     } catch (err) {
       console.log(err.message);
     }
@@ -31,7 +39,7 @@ const Card = ({ category, title_text }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [category, moviesByCategory]);
   console.log(data);
 
   // if (!data.length) return null;
@@ -59,24 +67,25 @@ const Card = ({ category, title_text }) => {
           1024: { slidesPerView: 4 },
           1280: { slidesPerView: 4 },
         }}
-        modules={[Autoplay]}
         className="w-full"
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="cursor-pointer relative overflow-hidden h-28 md:h-45 w-[190px] md:w-[320px] rounded-md bg-gray-900 shadow-lg transition-transform duration-300 hover:scale-105">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
-                alt={item.title}
-                className="h-64 w-full object-cover"
-              />
+            <Link to={`/player/${item.id}`}>
+              <div className="cursor-pointer relative overflow-hidden h-28 md:h-45 w-[190px] md:w-[320px] rounded-md bg-gray-900 shadow-lg transition-transform duration-300 hover:scale-105">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+                  alt={item.title}
+                  className="h-64 w-full object-cover"
+                />
 
-              <div className="p-2 absolute bottom-0 bg-black/50 w-full">
-                <h3 className=" text-sm font-semibold text-white md:text-[16px]">
-                  {item.title}
-                </h3>
+                <div className="p-2 absolute bottom-0 bg-black/50 w-full">
+                  <h3 className=" text-sm font-semibold text-white md:text-[16px]">
+                    {item.title}
+                  </h3>
+                </div>
               </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
