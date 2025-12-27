@@ -21,7 +21,7 @@ const Footer = () => {
             "Jobs",
             "Ways to Watch",
             "Terms of Use",
-            "Privacy",
+
             "Cookie Preferences",
             "Corporate Information",
             "Contact Us",
