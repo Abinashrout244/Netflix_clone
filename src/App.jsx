@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Publicsite from "./pages/publicsite/Publicsite";
-import Login from "./pages/publicsite/login";
-import SignUp from "./pages/publicsite/signUp";
+import Login from "./pages/publicsite/Login";
+import SignUp from "./pages/publicsite/SignUp";
 import PublicBody from "./components/publiclayout/PublicBody";
 import MainSite from "./pages/mainsite/MainSite";
 import PrivateRoute from "./route/PrivateRoute";
