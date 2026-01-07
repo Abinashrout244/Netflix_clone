@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import MainHeader from "../../components/Privatelayout/MainHeader";
-import MainBody from "../../components/Privatelayout/mainBody";
+import MainBody from "../../components/Privatelayout/MainBody";
 import Card from "../../components/Privatelayout/Card";
 import Footer from "../../components/Footer/Footer";
 import { DataContext } from "../../context/DataProvider";
