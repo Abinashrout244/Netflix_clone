@@ -35,4 +35,4 @@ This project focuses on modern UI, fast performance, and clean component archite
 **TMDB – The Movie Database**
 
 - Website: https://www.themoviedb.org/
-- API Base URL:
+
